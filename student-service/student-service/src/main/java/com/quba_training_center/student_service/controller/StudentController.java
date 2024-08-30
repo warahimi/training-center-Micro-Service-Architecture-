@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/student")
+@RequestMapping("/student")
 public class StudentController {
     private StudentService studentService;
 
@@ -26,43 +26,43 @@ public class StudentController {
     @GetMapping
     public List<Student> getStudents()
     {
-        Student student1 = new Student(
-                null,
-                "Abdullah",
-                "Rahimi",
-                null,
-                new ArrayList<>(Arrays.asList(new Parent("Wahidullah","Rahimi","Male","5095921947","1455 NE Brandi Way","wahidrahimi45@gmali.com"),
-                        new Parent("Farima","Rahimi","Female","34534545","1455 NE Brandi Way","farimarahimi44@gmali.com"))),
-                "04/09/2018",
-                "Male",
-                "ClassA"
-        );
-        if(student1.getFullName() == null)
-        {
-            student1.setFullName(student1.getFirstName() +" " + student1.getLastName());
-        }
-
-        Student student2 = new Student(
-                null,
-                "Mobashir",
-                "Bani",
-                null,
-                new ArrayList<>(Arrays.asList(new Parent("Sayed Sharif","Bani","Male","5095921947","Federal Way","sayed@gmali.com"),
-                        new Parent("Gul","Bani","Female","34534545","Federal Way","farimarahimi44@gmali.com"))),
-                "02/12/2018",
-                "Male",
-                "ClassB"
-        );
-        if(student2.getFullName() == null)
-        {
-            student2.setFullName(student2.getFirstName() +" " + student2.getLastName());
-        }
-
-        if(studentService.getStudents().size() == 0)
-        {
-            studentService.addStudent(student1);
-            studentService.addStudent(student2);
-        }
+//        Student student1 = new Student(
+//                null,
+//                "Abdullah",
+//                "Rahimi",
+//                null,
+//                new ArrayList<>(Arrays.asList(new Parent("Wahidullah","Rahimi","Male","5095921947","1455 NE Brandi Way","wahidrahimi45@gmali.com"),
+//                        new Parent("Farima","Rahimi","Female","34534545","1455 NE Brandi Way","farimarahimi44@gmali.com"))),
+//                "04/09/2018",
+//                "Male",
+//                "ClassA"
+//        );
+//        if(student1.getFullName() == null)
+//        {
+//            student1.setFullName(student1.getFirstName() +" " + student1.getLastName());
+//        }
+//
+//        Student student2 = new Student(
+//                null,
+//                "Mobashir",
+//                "Bani",
+//                null,
+//                new ArrayList<>(Arrays.asList(new Parent("Sayed Sharif","Bani","Male","5095921947","Federal Way","sayed@gmali.com"),
+//                        new Parent("Gul","Bani","Female","34534545","Federal Way","farimarahimi44@gmali.com"))),
+//                "02/12/2018",
+//                "Male",
+//                "ClassB"
+//        );
+//        if(student2.getFullName() == null)
+//        {
+//            student2.setFullName(student2.getFirstName() +" " + student2.getLastName());
+//        }
+//
+//        if(studentService.getStudents().size() == 0)
+//        {
+//            studentService.addStudent(student1);
+//            studentService.addStudent(student2);
+//        }
         return studentService.getStudents();
     }
     @PostMapping
@@ -180,6 +180,14 @@ public class StudentController {
             return ResponseEntity.notFound().build(); // Return 404 if no students found
         }
         return ResponseEntity.ok(students); // Return 200 with the list of students
+    }
+
+    // End point to add list of students to the database
+    @PostMapping("/add-all")
+    public ResponseEntity<List<Student>> addAllStudents(@RequestBody List<Student> students)
+    {
+        List<Student> savedStudents = studentService.saveAllStudents(students);
+        return new ResponseEntity<>(savedStudents, HttpStatus.CREATED);
     }
 
 }

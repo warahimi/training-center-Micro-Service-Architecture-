@@ -2,8 +2,10 @@ package com.quba_training_center.student_service.service;
 
 import com.quba_training_center.student_service.entity.Student;
 import com.quba_training_center.student_service.repository.StudentRepository;
+import com.quba_training_center.student_service.utilities.StudentReader;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +19,21 @@ public class StudentService {
 
     public List<Student> getStudents()
     {
+        /*
+            if the databse is empty read the student list from the file and insert it to the databse
+         */
+        if(studentRepository.findAll().size()==0)
+        {
+            StudentReader studentReader = new StudentReader();
+            try {
+                List<Student> students = studentReader.readStudentsFromFile("students-list.txt");
+                //students.forEach(System.out::println);
+                studentRepository.saveAll(students);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         return studentRepository.findAll();
     }
 
@@ -71,5 +88,18 @@ public class StudentService {
 
     public List<Student> findByParentEmail(String email) {
         return studentRepository.findByParentsEmail(email);
+    }
+
+    // API to save list of students to the database
+    public List<Student> saveAllStudents(List<Student> students)
+    {
+        for(Student student : students)
+        {
+            if(student.getFullName() == null)
+            {
+                student.setFullName(student.getFirstName() +" "+ student.getLastName());
+            }
+        }
+        return studentRepository.saveAll(students);
     }
 }

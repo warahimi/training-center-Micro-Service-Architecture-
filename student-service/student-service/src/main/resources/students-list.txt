@@ -1,0 +1,364 @@
+﻿[
+    {
+        "id": 1,
+        "firstName": "Abdullah",
+        "lastName": "Rahimi",
+        "fullName": "Abdullah Rahimi",
+        "parents": [
+            {
+                "firstName": "Wahidullah",
+                "lastName": "Rahimi",
+                "gender": "Male",
+                "phoneNumber": "5095921947",
+                "address": "1455 NE Brandi Way",
+                "email": "wahidrahimi45@gmali.com"
+            },
+            {
+                "firstName": "Farima",
+                "lastName": "Rahimi",
+                "gender": "Female",
+                "phoneNumber": "34534545",
+                "address": "1455 NE Brandi Way",
+                "email": "farimarahimi44@gmali.com"
+            }
+        ],
+        "dob": "04/09/2018",
+        "gender": "Male",
+        "className": "ClassA"
+    },
+    {
+        "id": 2,
+        "firstName": "Mobashir",
+        "lastName": "Bani",
+        "fullName": "Mobashir Bani",
+        "parents": [
+            {
+                "firstName": "Sayed Sharif",
+                "lastName": "Bani",
+                "gender": "Male",
+                "phoneNumber": "5095921947",
+                "address": "Federal Way",
+                "email": "sayed@gmali.com"
+            },
+            {
+                "firstName": "Gul",
+                "lastName": "Bani",
+                "gender": "Female",
+                "phoneNumber": "34534545",
+                "address": "Federal Way",
+                "email": "farimarahimi44@gmali.com"
+            }
+        ],
+        "dob": "02/12/2018",
+        "gender": "Male",
+        "className": "ClassB"
+    },
+    {
+        "id": 3,
+        "firstName": "Abdul Wahid",
+        "lastName": "Aziz",
+        "fullName": "Abdul Wahid Aziz",
+        "parents": [
+            {
+                "firstName": "Abdul Aziz",
+                "lastName": "Naqshbandi",
+                "gender": "Male",
+                "phoneNumber": "45546456",
+                "address": "Federal Way",
+                "email": "aziz@gmali.com"
+            }
+        ],
+        "dob": "02/12/2013",
+        "gender": "Male",
+        "className": "ClassC"
+    },
+    {
+        "id": 4,
+        "firstName": "Abdul Wahid",
+        "lastName": "Aziz",
+        "fullName": "Abdul Wahid Aziz",
+        "parents": [
+            {
+                "firstName": "Abdul Aziz",
+                "lastName": "Naqshbandi",
+                "gender": "Male",
+                "phoneNumber": "45546456",
+                "address": "Federal Way",
+                "email": "aziz@gmali.com"
+            }
+        ],
+        "dob": "02/12/2013",
+        "gender": "Male",
+        "className": "ClassC"
+    },
+    {
+        "id": 5,
+        "firstName": "Aisha",
+        "lastName": "Khan",
+        "fullName": "Aisha Khan",
+        "parents": [
+            {
+                "firstName": "Ahmed",
+                "lastName": "Khan",
+                "gender": "Male",
+                "phoneNumber": "1234567890",
+                "address": "123 Elm Street",
+                "email": "ahmed.khan@example.com"
+            },
+            {
+                "firstName": "Sara",
+                "lastName": "Khan",
+                "gender": "Female",
+                "phoneNumber": "0987654321",
+                "address": "123 Elm Street",
+                "email": "sara.khan@example.com"
+            }
+        ],
+        "dob": "05/11/2015",
+        "gender": "Female",
+        "className": "ClassB"
+    },
+    {
+        "id": 6,
+        "firstName": "Omar",
+        "lastName": "Ali",
+        "fullName": "Omar Ali",
+        "parents": [
+            {
+                "firstName": "Hassan",
+                "lastName": "Ali",
+                "gender": "Male",
+                "phoneNumber": "2345678901",
+                "address": "456 Maple Avenue",
+                "email": "hassan.ali@example.com"
+            },
+            {
+                "firstName": "Nadia",
+                "lastName": "Ali",
+                "gender": "Female",
+                "phoneNumber": "8765432109",
+                "address": "456 Maple Avenue",
+                "email": "nadia.ali@example.com"
+            }
+        ],
+        "dob": "09/21/2016",
+        "gender": "Male",
+        "className": "ClassA"
+    },
+    {
+        "id": 7,
+        "firstName": "Layla",
+        "lastName": "Hussein",
+        "fullName": "Layla Hussein",
+        "parents": [
+            {
+                "firstName": "Yusuf",
+                "lastName": "Hussein",
+                "gender": "Male",
+                "phoneNumber": "3456789012",
+                "address": "789 Oak Drive",
+                "email": "yusuf.hussein@example.com"
+            },
+            {
+                "firstName": "Fatima",
+                "lastName": "Hussein",
+                "gender": "Female",
+                "phoneNumber": "9876543210",
+                "address": "789 Oak Drive",
+                "email": "fatima.hussein@example.com"
+            }
+        ],
+        "dob": "03/14/2014",
+        "gender": "Female",
+        "className": "ClassC"
+    },
+    {
+        "id": 8,
+        "firstName": "Zain",
+        "lastName": "Malik",
+        "fullName": "Zain Malik",
+        "parents": [
+            {
+                "firstName": "Asim",
+                "lastName": "Malik",
+                "gender": "Male",
+                "phoneNumber": "4567890123",
+                "address": "123 Pine Street",
+                "email": "asim.malik@example.com"
+            },
+            {
+                "firstName": "Amina",
+                "lastName": "Malik",
+                "gender": "Female",
+                "phoneNumber": "8765432108",
+                "address": "123 Pine Street",
+                "email": "amina.malik@example.com"
+            }
+        ],
+        "dob": "07/07/2017",
+        "gender": "Male",
+        "className": "ClassA"
+    },
+    {
+        "id": 9,
+        "firstName": "Mariam",
+        "lastName": "Sadiq",
+        "fullName": "Mariam Sadiq",
+        "parents": [
+            {
+                "firstName": "Bilal",
+                "lastName": "Sadiq",
+                "gender": "Male",
+                "phoneNumber": "5678901234",
+                "address": "789 Birch Road",
+                "email": "bilal.sadiq@example.com"
+            },
+            {
+                "firstName": "Nour",
+                "lastName": "Sadiq",
+                "gender": "Female",
+                "phoneNumber": "9876543211",
+                "address": "789 Birch Road",
+                "email": "nour.sadiq@example.com"
+            }
+        ],
+        "dob": "02/28/2013",
+        "gender": "Female",
+        "className": "ClassB"
+    },
+    {
+        "id": 10,
+        "firstName": "Ayaan",
+        "lastName": "Qureshi",
+        "fullName": "Ayaan Qureshi",
+        "parents": [
+            {
+                "firstName": "Zafar",
+                "lastName": "Qureshi",
+                "gender": "Male",
+                "phoneNumber": "6789012345",
+                "address": "456 Cedar Lane",
+                "email": "zafar.qureshi@example.com"
+            },
+            {
+                "firstName": "Zahra",
+                "lastName": "Qureshi",
+                "gender": "Female",
+                "phoneNumber": "9876543212",
+                "address": "456 Cedar Lane",
+                "email": "zahra.qureshi@example.com"
+            }
+        ],
+        "dob": "01/05/2012",
+        "gender": "Male",
+        "className": "ClassC"
+    },
+    {
+        "id": 11,
+        "firstName": "Hana",
+        "lastName": "Shaikh",
+        "fullName": "Hana Shaikh",
+        "parents": [
+            {
+                "firstName": "Ibrahim",
+                "lastName": "Shaikh",
+                "gender": "Male",
+                "phoneNumber": "7890123456",
+                "address": "321 Spruce Way",
+                "email": "ibrahim.shaikh@example.com"
+            },
+            {
+                "firstName": "Rania",
+                "lastName": "Shaikh",
+                "gender": "Female",
+                "phoneNumber": "9876543213",
+                "address": "321 Spruce Way",
+                "email": "rania.shaikh@example.com"
+            }
+        ],
+        "dob": "10/23/2015",
+        "gender": "Female",
+        "className": "ClassB"
+    },
+    {
+        "id": 12,
+        "firstName": "Yasir",
+        "lastName": "Ahmed",
+        "fullName": "Yasir Ahmed",
+        "parents": [
+            {
+                "firstName": "Khalid",
+                "lastName": "Ahmed",
+                "gender": "Male",
+                "phoneNumber": "8901234567",
+                "address": "654 Fir Avenue",
+                "email": "khalid.ahmed@example.com"
+            },
+            {
+                "firstName": "Salma",
+                "lastName": "Ahmed",
+                "gender": "Female",
+                "phoneNumber": "9876543214",
+                "address": "654 Fir Avenue",
+                "email": "salma.ahmed@example.com"
+            }
+        ],
+        "dob": "11/30/2016",
+        "gender": "Male",
+        "className": "ClassA"
+    },
+    {
+        "id": 13,
+        "firstName": "Sara",
+        "lastName": "Patel",
+        "fullName": "Sara Patel",
+        "parents": [
+            {
+                "firstName": "Imran",
+                "lastName": "Patel",
+                "gender": "Male",
+                "phoneNumber": "9012345678",
+                "address": "987 Maplewood Drive",
+                "email": "imran.patel@example.com"
+            },
+            {
+                "firstName": "Alina",
+                "lastName": "Patel",
+                "gender": "Female",
+                "phoneNumber": "9876543215",
+                "address": "987 Maplewood Drive",
+                "email": "alina.patel@example.com"
+            }
+        ],
+        "dob": "08/15/2017",
+        "gender": "Female",
+        "className": "ClassB"
+    },
+    {
+        "id": 14,
+        "firstName": "Zara",
+        "lastName": "Hassan",
+        "fullName": "Zara Hassan",
+        "parents": [
+            {
+                "firstName": "Jamal",
+                "lastName": "Hassan",
+                "gender": "Male",
+                "phoneNumber": "0123456789",
+                "address": "432 Cypress Street",
+                "email": "jamal.hassan@example.com"
+            },
+            {
+                "firstName": "Laila",
+                "lastName": "Hassan",
+                "gender": "Female",
+                "phoneNumber": "9876543216",
+                "address": "432 Cypress Street",
+                "email": "laila.hassan@example.com"
+            }
+        ],
+        "dob": "04/04/2014",
+        "gender": "Female",
+        "className": "ClassC"
+    }
+]
