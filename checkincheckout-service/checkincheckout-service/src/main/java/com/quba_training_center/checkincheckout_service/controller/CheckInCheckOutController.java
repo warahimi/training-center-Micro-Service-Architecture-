@@ -32,6 +32,20 @@ public class CheckInCheckOutController {
         this.service=service;
     }
 
+    /**
+     * Endpoint to get all CheckInCheckOutStudent records for the current date.
+     * @return A ResponseEntity containing the list of students, or a 404 status if no records are found.
+     */
+    @GetMapping()
+    public ResponseEntity<List<CheckInCheckOutStudent>> getAllCheckInCheckOutStudents() {
+        List<CheckInCheckOutStudent> students = service.getAllCheckInCheckOutStudents();
+        if (!students.isEmpty()) {
+            return new ResponseEntity<>(students, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
 
     //Put http://localhost:8084/api/checkincheckout/checkin/1/Wahid
     @PutMapping("/checkin/{id}/{driverName}")
@@ -107,7 +121,7 @@ public class CheckInCheckOutController {
      * @param id The ID of the student.
      * @return A ResponseEntity containing the student if found, or a 404 status if not found.
      */
-    @GetMapping("/student/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<?> getCheckInCheckOutStudentById(@PathVariable Integer id) {
         CheckInCheckOutStudent student = service.getCheckInCheckOutStudentById(id);
         if (student != null) {
@@ -123,7 +137,7 @@ public class CheckInCheckOutController {
      * @param date The date for which to retrieve the student record.
      * @return A ResponseEntity containing the student if found, or a 404 status if not found.
      */
-    @GetMapping("/student/{id}/{date}")
+    @GetMapping("/{id}/{date}")
     public ResponseEntity<?> getCheckInCheckOutStudentByIdAndDate(@PathVariable Integer id, @PathVariable String date) {
         CheckInCheckOutStudent student = service.getCheckInCheckOutStudentByIdAndDate(id, date);
         if (student != null) {

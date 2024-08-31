@@ -38,6 +38,7 @@ public class CheckInCheckOutService {
         this.dateAndTimeUtil = dateAndTimeUtil;
     }
 
+
 //    @Transactional
 //    public void initializeCheckInCheckOutData() {
 //        String date = dateAndTimeUtil.getDate();
@@ -129,6 +130,17 @@ public class CheckInCheckOutService {
         return repository.findById(id);
     }
 
+    /**
+     * Fetches all CheckInCheckOutStudent records for the current date.
+     * @return A list of CheckInCheckOutStudent records.
+     */
+    public List<CheckInCheckOutStudent> getAllCheckInCheckOutStudents() {
+        String date = dateAndTimeUtil.getDate();
+        String tableName = "students_checkin_checkout_" + date.replace("-", "_");
+
+        String selectSQL = "SELECT * FROM " + tableName;
+        return entityManager.createNativeQuery(selectSQL, CheckInCheckOutStudent.class).getResultList();
+    }
 
 
     /**
